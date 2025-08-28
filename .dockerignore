@@ -1,0 +1,28 @@
+# Ignore Python cache and venvs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+.env
+.venv/
+venv/
+
+# Git
+.git/
+.gitignore
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Bytecode and build
+build/
+dist/
+*.egg-info/
+
+# OS
+.DS_Store
+
+# Local databases and runtime files (mount as a volume in prod if needed)
+messages.db

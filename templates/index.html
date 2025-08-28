@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="hero">
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1 class="display-5 fw-bold">Bezproblemowe złomowanie i recykling samochodów</h1>
+          <p class="lead">Zezłomuj auto szybko i w uczciwej cenie. Darmowy odbiór, natychmiastowa wycena i ekologiczny recykling.</p>
+          <a href="#accept" class="btn btn-primary btn-lg">Zobacz co przyjmujemy</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg ms-2">Wyceń pojazd</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2>Dlaczego warto złomować z nami?</h2>
+        <p>Ułatwiamy złomowanie auta – szybko i z korzyścią. Otrzymasz uczciwą ofertę, darmowy odbiór i komplet formalności – wszystko obsłużone przez specjalistów dbających o odpowiedzialny recykling.</p>
+        <ul>
+          <li>Darmowy odbiór i szybka płatność</li>
+          <li>Natychmiastowa, niewiążąca wycena</li>
+          <li>Przyjazny dla środowiska recykling</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=2070&auto=format&fit=crop" alt="Złomowisko samochodów">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="accept" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2>Co przyjmujemy</h2>
+      <p class="text-muted">Kupujemy i poddajemy recyklingowi szeroką gamę pojazdów w każdym stanie.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://www.bmssalvage.co.uk/wp-content/uploads/2020/05/reparing-791413_1920-1024x683.jpg?q=80&w=2069&auto=format&fit=crop" class="card-img-top" alt="Pojazd wycofany z eksploatacji">
+          <div class="card-body">
+            <h5 class="card-title">Pojazdy wycofane z eksploatacji</h5>
+            <p class="card-text">Kompletne pojazdy na końcu cyklu życia — każda marka, każdy model, w dowolnym stanie.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2069&auto=format&fit=crop" class="card-img-top" alt="Auto niesprawne">
+          <div class="card-body">
+            <h5 class="card-title">Niesprawne i po nieudanym przeglądzie</h5>
+            <p class="card-text">Odbieramy pojazdy, które nie jeżdżą lub nie przeszły badania technicznego — nie wymagamy kluczyków ani dokumentów.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="https://live-production.wcms.abc-cdn.net.au/28be970eba5f2edd86af42c42af53f3f?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=281&width=862&height=485&auto=format&fit=crop" class="card-img-top" alt="Pojazd powypadkowy">
+          <div class="card-body">
+            <h5 class="card-title">Pojazdy powypadkowe</h5>
+            <p class="card-text">Szkody całkowite, zalanie, pożar lub grad — zutylizujemy i przetworzymy je odpowiedzialnie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2>Wyceń pojazd</h2>
+        <p>Chcesz zezłomować auto lub masz pytania? Wyślij nam wiadomość — szybko wrócimy z wyceną.</p>
+        <form action="{{ url_for('contact') }}" method="post" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">Imię</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+            <div class="invalid-feedback">Wprowadź imię.</div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">Podaj prawidłowy adres e‑mail.</div>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Wiadomość</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            <div class="invalid-feedback">Wpisz wiadomość.</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Wyślij wiadomość</button>
+        </form>
+      </div>
+      <div class="col-lg-6 mt-4 mt-lg-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nasze zobowiązanie</h5>
+            <p class="card-text">Uczciwe oferty, szybki odbiór i odpowiedzialny recykling — a do tego pełna obsługa formalności.</p>
+            <ul class="list-unstyled">
+              <li>• Odbiór tego samego lub następnego dnia</li>
+              <li>• Pomoc w formalnościach (wydział komunikacji/tytuł własności)</li>
+              <li>• Ekologiczna utylizacja</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Prosta walidacja po stronie klienta
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
+{% endblock %}
