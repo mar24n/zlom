@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "dev-secret-key-change-me")
 
 # Database configuration
-DB_PATH = os.path.join(app.root_path, "messages.db")
-
+# DB_PATH = os.path.join(app.root_path, "messages.db")
+DB_PATH = os.getenv("DB_PATH", os.path.join(app.root_path, "messages.db"))
 
 def get_db():
     db = getattr(g, "_database", None)
